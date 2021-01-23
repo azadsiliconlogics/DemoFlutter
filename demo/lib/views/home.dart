@@ -1,8 +1,4 @@
-import 'package:demo/views/fourth_page.dart';
 import 'package:flutter/material.dart';
-import 'package:demo/views/first_page.dart';
-import 'package:demo/views/second_page.dart';
-import 'package:demo/views/third_page.dart';
 import 'package:demo/commons/arguements.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,6 +12,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   var message = "This will show you message from fourth screen.";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,20 +21,14 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
           child: Container(
-        padding: EdgeInsets.only(top: 25),
+        padding: EdgeInsets.only(top: 55),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Container(
               padding: EdgeInsets.only(top: 15, bottom: 50),
               child: Text(
-                'Flutter Routing Example',
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(top: 15, bottom: 25),
-              child: Text(
-                'Material Routes',
+                'Flutter Route Generator Example',
               ),
             ),
             FlatButton(
@@ -48,11 +39,7 @@ class _HomePageState extends State<HomePage> {
               textColor: Colors.blue,
               padding: EdgeInsets.all(8.0),
               onPressed: () {
-                //Simple Material Route
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => FirstPage()),
-                );
+                Navigator.pushNamed(context, '/first');
               },
               child: Text(
                 "First Page",
@@ -69,17 +56,35 @@ class _HomePageState extends State<HomePage> {
               textColor: Colors.blue,
               padding: EdgeInsets.all(8.0),
               onPressed: () {
-                //Pass data with Material Route
-
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => SecondPage(
-                          title: "This variable is pass through navigation")),
+                Navigator.of(context).pushNamed(
+                  '/second',
+                  arguments:
+                      "Second Page", //This is really importan. Here you should pass every parameter as arguments
                 );
               },
               child: Text(
                 "Second Page",
+                style: TextStyle(
+                  fontSize: 14.0,
+                ),
+              ),
+            ),
+            FlatButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0),
+                  side: BorderSide(color: Colors.blue)),
+              color: Colors.white,
+              textColor: Colors.blue,
+              padding: EdgeInsets.all(8.0),
+              onPressed: () {
+                Navigator.of(context).pushNamed(
+                  '/third',
+                  arguments: ThirdPageArguments(
+                      "Third Page", "This message pass through named route"),
+                );
+              },
+              child: Text(
+                "Third Page",
                 style: TextStyle(
                   fontSize: 14.0,
                 ),
@@ -105,50 +110,6 @@ class _HomePageState extends State<HomePage> {
             Text(
               this.message,
             ),
-            Container(
-              padding: EdgeInsets.only(top: 75, bottom: 30),
-              child: Text(
-                'Named Routes',
-              ),
-            ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18.0),
-                  side: BorderSide(color: Colors.blue)),
-              color: Colors.white,
-              textColor: Colors.blue,
-              padding: EdgeInsets.all(8.0),
-              onPressed: () {
-                //Named Route for first screen
-                Navigator.pushNamed(context, '/first');
-              },
-              child: Text(
-                "First Page",
-                style: TextStyle(
-                  fontSize: 14.0,
-                ),
-              ),
-            ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18.0),
-                  side: BorderSide(color: Colors.blue)),
-              color: Colors.white,
-              textColor: Colors.blue,
-              padding: EdgeInsets.all(8.0),
-              onPressed: () {
-                //Pass data with Named route
-                var arg = ThirdPageArguments(
-                    "Third Page", "This message pass through named route");
-                Navigator.pushNamed(context, '/third', arguments: arg);
-              },
-              child: Text(
-                "Third Page",
-                style: TextStyle(
-                  fontSize: 14.0,
-                ),
-              ),
-            ),
           ],
         ),
       )),
@@ -156,12 +117,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   void navigateToFourth() async {
-    //Pass data with Material Route
-    var msg = await Navigator.push(
-      context,
-      // Create the SelectionScreen in the next step.
-      MaterialPageRoute(builder: (context) => FourthPage()),
-    );
+    //Use the same material route way to get data back
+    var msg = await Navigator.pushNamed(context, '/fourth');
     setState(() {
       this.message = msg;
     });
