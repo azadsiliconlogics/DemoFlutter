@@ -1,6 +1,8 @@
+import 'package:demo/views/first_page.dart';
 import 'package:flutter/material.dart';
 import 'package:demo/views/home.dart';
-import 'package:demo/commons/route_generator.dart';
+import 'package:demo/views/second_page.dart';
+import 'package:demo/views/third_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,8 +19,11 @@ class MyApp extends StatelessWidget {
       ),
       //Define Route Map for Named Routes
       initialRoute: '/',
-      //Instead of route map we have set generate route function using onGenerateRoute
-      onGenerateRoute: RouteGenerator.generateRoute,
+      routes: {
+        '/first': (context) => FirstPage(), //Named route for first screen
+        '/second': (context) => SecondPage(), //Named route for second screen
+        '/third': (context) => ThirdPage(), //Named route for third screen
+      },
       home: HomePage(title: 'Flutter Routing Example'),
     );
   }

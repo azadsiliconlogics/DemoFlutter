@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:demo/commons/arguements.dart';
 
 class ThirdPage extends StatelessWidget {
-  final ThirdPageArguments data;
-  ThirdPage({this.data});
-
   @override
   Widget build(BuildContext context) {
+    final ThirdPageArguments args = ModalRoute.of(context).settings.arguments;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(data.title),
+        title: Text(args.title),
       ),
       body: Center(
         child: Column(
@@ -19,7 +18,7 @@ class ThirdPage extends StatelessWidget {
             Container(
               padding: EdgeInsets.only(top: 15, bottom: 25),
               child: Text(
-                data.message,
+                args.message,
               ),
             ),
             FlatButton(
