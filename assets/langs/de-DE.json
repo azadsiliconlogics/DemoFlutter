@@ -1,6 +1,9 @@
 {
     "titles": {
-        "home" : "Home",
-        "first" : "First Screen"
-    }
+        "home": "Home",
+        "first": "First Screen"       
+    },
+    "email": "Email",
+    "password": "Password",
+    "login": "Login"
 }

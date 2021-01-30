@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -14,62 +15,63 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title,
-            style: Theme.of(context).appBarTheme.textTheme.headline4),
+        title: Text("Login", style: Theme.of(context).appBarTheme.textTheme.headline4),
       ),
-      body: Center(
-          child: Container(
-        padding: EdgeInsets.only(top: 55),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.only(top: 15, bottom: 50),
-              child: Text(
-                'Home',
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+
+          Center(
+              child: Container(
+            padding: EdgeInsets.all(10),
+            child: new Image(
+              image: new AssetImage("assets/images/avator.jpg"),
+              height: 200,
+              width: 160,
+            ),
+          )),
+
+          Container(
+            padding: EdgeInsets.only(left: 10),
+            child: Text('email'.tr()),
+          ),
+
+          Container(
+            margin: EdgeInsets.all(10),
+            child: TextField(
+              obscureText: false,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'email'.tr(),
               ),
             ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18.0),
-                  side: BorderSide(color: Colors.blue)),
-              color: Colors.white,
-              textColor: Colors.blue,
-              padding: EdgeInsets.all(8.0),
-              onPressed: () {
-                Navigator.pushNamed(context, '/users');
-              },
-              child: Text(
-                "Users",
-                style: TextStyle(
-                  fontSize: 14.0,
-                ),
+          ),
+
+          Container(
+            padding: EdgeInsets.only(left: 10),
+            child: Text('password'.tr()),
+          ),
+
+          Container(
+            margin: EdgeInsets.all(10),
+            child: TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'password'.tr(),
               ),
             ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18.0),
-                  side: BorderSide(color: Colors.blue)),
-              color: Colors.white,
-              textColor: Colors.blue,
-              padding: EdgeInsets.all(8.0),
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  '/profile',
-                  arguments:
-                      "Second Page", //This is really importan. Here you should pass every parameter as arguments
-                );
-              },
-              child: Text(
-                "Profile",
-                style: TextStyle(
-                  fontSize: 14.0,
-                ),
-              ),
-            ),
-          ],
-        ),
-      )),
+          ),
+
+          Center(
+              child: RaisedButton(
+            color: Colors.blue,
+            onPressed: () {},
+            child: Text('login'.tr(), style: TextStyle(fontSize: 20)),
+          )),
+          
+        ],
+      ),
     );
   }
 }
