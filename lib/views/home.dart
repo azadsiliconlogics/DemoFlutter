@@ -41,12 +41,35 @@ class _HomePageState extends State<HomePage> {
 
           Container(
             margin: EdgeInsets.all(10),
+            child: TextField(
+              obscureText: false,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'email'.tr(),
+              ),
+            ),
+          ),
+
+          Container(
+            margin: EdgeInsets.all(10),
             child: Text('password'.tr()),
           ),
 
           Container(
             margin: EdgeInsets.all(10),
-          )
+            child: TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'password'.tr(),
+              ),
+            ),
+          ),
+
+          RaisedButton(
+            onPressed: () {},
+            child: Text('login'.tr(), style: TextStyle(fontSize: 20)),
+          ),
 
         ],
       ),
