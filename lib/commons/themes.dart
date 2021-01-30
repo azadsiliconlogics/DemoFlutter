@@ -34,7 +34,9 @@ ThemeData primaryTheme = ThemeData(
       color: Colors.white,
     ),
   )),
-  buttonTheme: ButtonThemeData(textTheme: ButtonTextTheme.primary),
+  buttonTheme: ButtonThemeData(
+      //button themes
+      ),
   toggleButtonsTheme: ToggleButtonsThemeData(
       //toggle button theme
       ),
@@ -46,42 +48,15 @@ ThemeData primaryTheme = ThemeData(
   backgroundColor: Color(0xff457BE0),
   dialogBackgroundColor: Colors.white,
   indicatorColor: Color(0xff457BE0),
-  hintColor: HexColor.fromHex("#bcbec0"),
+  hintColor: Colors.grey,
   errorColor: Colors.red,
   toggleableActiveColor: Color(0xff6D42CE),
-  inputDecorationTheme: InputDecorationTheme(
-    labelStyle: TextStyle(
-      fontFamily: 'Lato',
-      fontSize: 14.0,
-      fontWeight: FontWeight.normal,
-      color: HexColor.fromHex("#414042"),
-    ),
-  ),
   textTheme: TextTheme(
-    headline4: TextStyle(
-      fontFamily: 'Lato',
-      fontSize: 18,
-      fontWeight: FontWeight.bold,
-      color: Colors.white,
-    ),
-    subtitle1: TextStyle(
-      fontFamily: 'Lato',
-      fontSize: 18,
-      fontWeight: FontWeight.normal,
-    ),
-    bodyText1: TextStyle(
-      fontFamily: 'Lato',
-      fontSize: 18,
-      fontWeight: FontWeight.normal,
-    ),
-  ),
+      //text themes that contrast with card and canvas
+      ),
   primaryTextTheme: TextTheme(
-    headline5: TextStyle(
-      fontFamily: 'Lato',
-      fontSize: 16,
-      fontWeight: FontWeight.normal,
-    ),
-  ),
+      //text theme that contrast with primary color
+      ),
   platform: TargetPlatform.android,
   materialTapTargetSize: MaterialTapTargetSize.padded,
   applyElevationOverlayColor: true,
