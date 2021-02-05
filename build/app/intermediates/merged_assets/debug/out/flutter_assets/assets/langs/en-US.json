@@ -4,5 +4,6 @@
         "first": "First Screen"
     },
     "email": "Email",
-    "password": "Password"
+    "password": "Password",
+    "login": "Login"
 }
