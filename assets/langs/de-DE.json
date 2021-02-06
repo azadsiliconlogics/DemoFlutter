@@ -1,9 +1,7 @@
 {
     "titles": {
-        "home": "Home",
-        "first": "First Screen"       
-    },
-    "email": "Email",
-    "password": "Password",
-    "login": "Login"
+        "home" : "Home",
+        "first" : "First Screen",
+        "industries": "Industries"
+    }
 }
