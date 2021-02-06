@@ -1,3 +1,4 @@
+import 'package:demo/views/industries.dart';
 import 'package:demo/views/login.dart';
 import 'package:flutter/material.dart';
 import 'package:demo/views/home.dart';
@@ -19,6 +20,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => UsersPage());
       case '/profile':
         return MaterialPageRoute(builder: (_) => ProfilePage());
+      case '/industry':
+        return MaterialPageRoute(builder: (_) => IndustriesPage());
       default:
         return _errorRoute();
     }

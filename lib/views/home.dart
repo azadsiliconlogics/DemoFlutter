@@ -64,6 +64,27 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
+            FlatButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0),
+                  side: BorderSide(color: Colors.blue)),
+              color: Colors.white,
+              textColor: Colors.blue,
+              padding: EdgeInsets.all(8.0),
+              onPressed: () {
+                Navigator.of(context).pushNamed(
+                  '/industry',
+                  arguments:
+                      "Third Page", //This is really importan. Here you should pass every parameter as arguments
+                );
+              },
+              child: Text(
+                "Industry",
+                style: TextStyle(
+                  fontSize: 14.0,
+                ),
+              ),
+            ),
           ],
         ),
       )),
