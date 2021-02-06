@@ -1,77 +1,35 @@
+import 'package:demo/views/user_card.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key key, this.title}) : super(key: key);
-
   final String title;
+
+  HomePage({Key key, this.title}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  @override
+  List<String> users = ["Kamal Perera", "Nimal Dissanayaka", "Saman De Silva", "Sunil Mendis", "Shehan Gunawardana", "Sudath Nishantha"];
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login", style: Theme.of(context).appBarTheme.textTheme.headline4),
+        title: Text("Test app", style: Theme.of(context).appBarTheme.textTheme.headline4),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-
-          Center(
-              child: Container(
-            padding: EdgeInsets.all(10),
-            child: new Image(
-              image: new AssetImage("assets/images/avator.jpg"),
-              height: 200,
-              width: 160,
-            ),
-          )),
-
-          Container(
-            padding: EdgeInsets.only(left: 10),
-            child: Text('email'.tr()),
-          ),
-
-          Container(
-            margin: EdgeInsets.all(10),
-            child: TextField(
-              obscureText: false,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'email'.tr(),
-              ),
-            ),
-          ),
-
-          Container(
-            padding: EdgeInsets.only(left: 10),
-            child: Text('password'.tr()),
-          ),
-
-          Container(
-            margin: EdgeInsets.all(10),
-            child: TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'password'.tr(),
-              ),
-            ),
-          ),
-
-          Center(
-              child: RaisedButton(
-            color: Colors.blue,
-            onPressed: () {},
-            child: Text('login'.tr(), style: TextStyle(fontSize: 20)),
-          )),
-          
-        ],
-      ),
+      body: ListView.separated(
+          itemCount: users.length,
+          itemBuilder: (BuildContext context, int index) {
+            return userItem(context, users[index]);
+          },
+          separatorBuilder: (BuildContext context, index) {
+            return Divider(
+              height: 2.0,
+              color: Colors.transparent,
+            );
+          }),
     );
   }
 }
