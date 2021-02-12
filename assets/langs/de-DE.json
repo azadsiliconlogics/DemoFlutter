@@ -2,6 +2,7 @@
     "titles": {
         "home" : "Home",
         "first" : "First Screen",
-        "industries": "Industries"
+        "industries": "Industries",
+        "navigate": "Navigate"
     }
 }

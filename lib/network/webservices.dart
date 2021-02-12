@@ -44,6 +44,44 @@ Future<LoginResponse> login(BuildContext context, username, password) async {
 }
 
 
+Future<bool> logout(BuildContext context) async {
+  var connectivityResult = await (Connectivity().checkConnectivity());
+
+  if ((connectivityResult == ConnectivityResult.mobile) ||
+      (connectivityResult == ConnectivityResult.wifi)) {
+    try {
+      var token = await Utilities.userToken();
+      showLoader(context);
+      final http.Response response =
+          await http.get(global.LOGIN, headers: {
+        "Content-Type": "application/json",
+        'Authorization': 'Bearer $token',
+      });
+      stopLoader(context);
+      
+      
+
+      if (response.statusCode == 200) {
+        return true;
+      } else if (response.statusCode == 400) {
+        var responseBody = json.decode(response.body);
+        String message = responseBody['error'];
+        showFloatingFlushbar(context, message);
+        return false;
+      } else {
+        showFloatingFlushbar(context, 'errors.login'.tr());
+        return false;
+      }
+    } catch (e) {
+      showFloatingFlushbar(context, 'errors.login'.tr());
+      return false;
+    }
+  } else {
+    showFloatingFlushbar(context, 'errors.network'.tr());
+    return false;
+  }
+}
+
 Future<IndustryResponse> getIndustries(BuildContext context) async {
   var connectivityResult = await (Connectivity().checkConnectivity());
   var token = await Utilities.userToken();
