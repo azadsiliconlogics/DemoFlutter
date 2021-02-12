@@ -1,6 +1,7 @@
 {
     "titles": {
         "home" : "Home",
-        "first" : "First Screen"
+        "first" : "First Screen",
+        "industries": "Industries"
     }
 }
