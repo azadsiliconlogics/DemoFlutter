@@ -7,14 +7,20 @@ INJECTED from E:\Tutorials\Flutter\DemoFlutter\android\app\src\main\AndroidManif
 MERGED from E:\Tutorials\Flutter\DemoFlutter\android\app\src\main\AndroidManifest.xml:1:1-47:12
 MERGED from [:shared_preferences] E:\Tutorials\Flutter\DemoFlutter\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:sqflite] E:\Tutorials\Flutter\DemoFlutter\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:sentry_flutter] E:\Tutorials\Flutter\DemoFlutter\build\sentry_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-18:12
 MERGED from [:connectivity] E:\Tutorials\Flutter\DemoFlutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-10:12
 MERGED from [:path_provider] E:\Tutorials\Flutter\DemoFlutter\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:package_info] E:\Tutorials\Flutter\DemoFlutter\build\package_info\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [io.sentry:sentry-android:3.2.1] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\83181bc64459205f4564c5d646d239dc\sentry-android-3.2.1\AndroidManifest.xml:2:1-13:12
+MERGED from [io.sentry:sentry-android-ndk:3.2.1] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\28e2bd03062ba2f9697222ffb1f8e44b\sentry-android-ndk-3.2.1\AndroidManifest.xml:2:1-11:12
+MERGED from [io.sentry:sentry-android-core:3.2.1] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\2703bbb52ce5cc955d2fb0407f02f359\jetified-sentry-android-core-3.2.1\AndroidManifest.xml:2:1-22:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\0986d0d74b8a2c7da8161f6370fc7744\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\615cab8ad6393a9c868d48761bbea666\activity-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\28d99d5113324aa067757f8ca41a426f\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\e1bbce6b0d79e8479b70e7bd729bb743\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\ef0bef029ab70f5fb29de019060cf5fd\customview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.1.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\98b39a8d273e7964d4c7f29af7ec708c\lifecycle-process-2.2.0\AndroidManifest.xml:17:1-32:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\49ede1f7b9aa322a43288e9745adc2db\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\54d8b8735f730e83f07925f758092af3\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\23edc849475fdda61367cb003f9b9f93\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
@@ -41,8 +47,14 @@ INJECTED from E:\Tutorials\Flutter\DemoFlutter\android\app\src\debug\AndroidMani
 		ADDED from E:\Tutorials\Flutter\DemoFlutter\android\app\src\main\AndroidManifest.xml:1:11-69
 application
 ADDED from E:\Tutorials\Flutter\DemoFlutter\android\app\src\main\AndroidManifest.xml:8:5-46:19
+MERGED from [:sentry_flutter] E:\Tutorials\Flutter\DemoFlutter\build\sentry_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-16:19
+MERGED from [:sentry_flutter] E:\Tutorials\Flutter\DemoFlutter\build\sentry_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-16:19
+MERGED from [io.sentry:sentry-android-core:3.2.1] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\2703bbb52ce5cc955d2fb0407f02f359\jetified-sentry-android-core-3.2.1\AndroidManifest.xml:13:5-20:19
+MERGED from [io.sentry:sentry-android-core:3.2.1] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\2703bbb52ce5cc955d2fb0407f02f359\jetified-sentry-android-core-3.2.1\AndroidManifest.xml:13:5-20:19
 MERGED from [androidx.core:core:1.1.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.1.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\98b39a8d273e7964d4c7f29af7ec708c\lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\98b39a8d273e7964d4c7f29af7ec708c\lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\3a7eb299570065a3866b140e1a95969b\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\3a7eb299570065a3866b140e1a95969b\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
@@ -103,10 +115,20 @@ MERGED from [:shared_preferences] E:\Tutorials\Flutter\DemoFlutter\build\shared_
 MERGED from [:shared_preferences] E:\Tutorials\Flutter\DemoFlutter\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:sqflite] E:\Tutorials\Flutter\DemoFlutter\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:sqflite] E:\Tutorials\Flutter\DemoFlutter\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:sentry_flutter] E:\Tutorials\Flutter\DemoFlutter\build\sentry_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:6:5-8:41
+MERGED from [:sentry_flutter] E:\Tutorials\Flutter\DemoFlutter\build\sentry_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:6:5-8:41
 MERGED from [:connectivity] E:\Tutorials\Flutter\DemoFlutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:connectivity] E:\Tutorials\Flutter\DemoFlutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] E:\Tutorials\Flutter\DemoFlutter\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] E:\Tutorials\Flutter\DemoFlutter\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:package_info] E:\Tutorials\Flutter\DemoFlutter\build\package_info\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:package_info] E:\Tutorials\Flutter\DemoFlutter\build\package_info\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [io.sentry:sentry-android:3.2.1] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\83181bc64459205f4564c5d646d239dc\sentry-android-3.2.1\AndroidManifest.xml:8:5-11:57
+MERGED from [io.sentry:sentry-android:3.2.1] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\83181bc64459205f4564c5d646d239dc\sentry-android-3.2.1\AndroidManifest.xml:8:5-11:57
+MERGED from [io.sentry:sentry-android-ndk:3.2.1] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\28e2bd03062ba2f9697222ffb1f8e44b\sentry-android-ndk-3.2.1\AndroidManifest.xml:7:5-9:41
+MERGED from [io.sentry:sentry-android-ndk:3.2.1] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\28e2bd03062ba2f9697222ffb1f8e44b\sentry-android-ndk-3.2.1\AndroidManifest.xml:7:5-9:41
+MERGED from [io.sentry:sentry-android-core:3.2.1] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\2703bbb52ce5cc955d2fb0407f02f359\jetified-sentry-android-core-3.2.1\AndroidManifest.xml:7:5-9:41
+MERGED from [io.sentry:sentry-android-core:3.2.1] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\2703bbb52ce5cc955d2fb0407f02f359\jetified-sentry-android-core-3.2.1\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\0986d0d74b8a2c7da8161f6370fc7744\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\0986d0d74b8a2c7da8161f6370fc7744\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\615cab8ad6393a9c868d48761bbea666\activity-1.0.0\AndroidManifest.xml:20:5-22:41
@@ -119,6 +141,8 @@ MERGED from [androidx.customview:customview:1.0.0] C:\Users\NM\.gradle\caches\tr
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\ef0bef029ab70f5fb29de019060cf5fd\customview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.1.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.1.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\98b39a8d273e7964d4c7f29af7ec708c\lifecycle-process-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\98b39a8d273e7964d4c7f29af7ec708c\lifecycle-process-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\49ede1f7b9aa322a43288e9745adc2db\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\49ede1f7b9aa322a43288e9745adc2db\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\54d8b8735f730e83f07925f758092af3\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
@@ -135,6 +159,8 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\NM\.gradle\c
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\b80fad55c42c418cc210e235056767fb\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
 INJECTED from E:\Tutorials\Flutter\DemoFlutter\android\app\src\debug\AndroidManifest.xml
 INJECTED from E:\Tutorials\Flutter\DemoFlutter\android\app\src\debug\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [io.sentry:sentry-android:3.2.1] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\83181bc64459205f4564c5d646d239dc\sentry-android-3.2.1\AndroidManifest.xml:11:9-54
 	android:targetSdkVersion
 		INJECTED from E:\Tutorials\Flutter\DemoFlutter\android\app\src\main\AndroidManifest.xml
 		INJECTED from E:\Tutorials\Flutter\DemoFlutter\android\app\src\debug\AndroidManifest.xml
@@ -143,8 +169,21 @@ INJECTED from E:\Tutorials\Flutter\DemoFlutter\android\app\src\debug\AndroidMani
 		INJECTED from E:\Tutorials\Flutter\DemoFlutter\android\app\src\debug\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
 ADDED from E:\Tutorials\Flutter\DemoFlutter\android\app\src\debug\AndroidManifest.xml:6:5-66
+MERGED from [io.sentry:sentry-android-core:3.2.1] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\2703bbb52ce5cc955d2fb0407f02f359\jetified-sentry-android-core-3.2.1\AndroidManifest.xml:11:5-67
+MERGED from [io.sentry:sentry-android-core:3.2.1] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\2703bbb52ce5cc955d2fb0407f02f359\jetified-sentry-android-core-3.2.1\AndroidManifest.xml:11:5-67
 	android:name
 		ADDED from E:\Tutorials\Flutter\DemoFlutter\android\app\src\debug\AndroidManifest.xml:6:22-64
+provider#io.sentry.android.core.SentryInitProvider
+ADDED from [:sentry_flutter] E:\Tutorials\Flutter\DemoFlutter\build\sentry_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:11:9-15:35
+REJECTED from [io.sentry:sentry-android-core:3.2.1] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\2703bbb52ce5cc955d2fb0407f02f359\jetified-sentry-android-core-3.2.1\AndroidManifest.xml:16:9-19:40
+	tools:node
+		ADDED from [:sentry_flutter] E:\Tutorials\Flutter\DemoFlutter\build\sentry_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-32
+	android:authorities
+		ADDED from [:sentry_flutter] E:\Tutorials\Flutter\DemoFlutter\build\sentry_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-70
+	android:exported
+		ADDED from [:sentry_flutter] E:\Tutorials\Flutter\DemoFlutter\build\sentry_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
+	android:name
+		ADDED from [:sentry_flutter] E:\Tutorials\Flutter\DemoFlutter\build\sentry_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-69
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [:connectivity] E:\Tutorials\Flutter\DemoFlutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-79
 	android:name
@@ -153,3 +192,13 @@ uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [:connectivity] E:\Tutorials\Flutter\DemoFlutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-76
 	android:name
 		ADDED from [:connectivity] E:\Tutorials\Flutter\DemoFlutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-73
+provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\98b39a8d273e7964d4c7f29af7ec708c\lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\98b39a8d273e7964d4c7f29af7ec708c\lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+	android:multiprocess
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\98b39a8d273e7964d4c7f29af7ec708c\lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\98b39a8d273e7964d4c7f29af7ec708c\lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\98b39a8d273e7964d4c7f29af7ec708c\lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79

@@ -100,6 +100,17 @@
 69-->E:\Tutorials\Flutter\DemoFlutter\android\app\src\main\AndroidManifest.xml:44:13-44
 70            android:value="2" />
 70-->E:\Tutorials\Flutter\DemoFlutter\android\app\src\main\AndroidManifest.xml:45:13-30
-71    </application>
-72
-73</manifest>
+71
+72        <provider
+72-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\98b39a8d273e7964d4c7f29af7ec708c\lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+73            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+73-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\98b39a8d273e7964d4c7f29af7ec708c\lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+74            android:authorities="com.ucsc.demo.lifecycle-process"
+74-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\98b39a8d273e7964d4c7f29af7ec708c\lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+75            android:exported="false"
+75-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\98b39a8d273e7964d4c7f29af7ec708c\lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+76            android:multiprocess="true" />
+76-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\NM\.gradle\caches\transforms-2\files-2.1\98b39a8d273e7964d4c7f29af7ec708c\lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+77    </application>
+78
+79</manifest>

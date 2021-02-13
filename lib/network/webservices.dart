@@ -9,7 +9,7 @@ import 'package:demo/commons/globals.dart' as global;
 import 'package:demo/models/login_response.dart';
 import 'package:demo/widgets/loader.dart';
 import 'package:demo/models/industry_response.dart';
-import 'package:demo/commons/utilities.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
 
 Future<LoginResponse> login(BuildContext context, username, password) async {
   var connectivityResult = await (Connectivity().checkConnectivity());
@@ -34,7 +34,8 @@ Future<LoginResponse> login(BuildContext context, username, password) async {
         showFloatingFlushbar(context, 'errors.login'.tr(), true);
         return null;
       }
-    } catch (e) {
+    }catch (e, stackTrace) {
+      await Sentry.captureException( e, stackTrace: stackTrace, );
       showFloatingFlushbar(context, 'errors.unknown'.tr(), true);
       return null;
     }
@@ -70,11 +71,16 @@ Future<IndustryResponse> getIndustries(BuildContext context) async {
         showFloatingFlushbar(context, 'errors.industries'.tr(), true);
         return null;
       }
-    } catch (e) {
-      print(e);
+    }catch (e, stackTrace) {
+      await Sentry.captureException( e, stackTrace: stackTrace, );
       showFloatingFlushbar(context, 'errors.unknown'.tr(), true);
       return null;
     }
+    // } catch (e) {
+    //   print(e);
+    //   showFloatingFlushbar(context, 'errors.unknown'.tr(), true);
+    //   return null;
+    // }
   } else {
     showFloatingFlushbar(context, 'errors.network'.tr(), true);
     return null;
@@ -102,10 +108,10 @@ Future<bool> logout(BuildContext context) async {
         showFloatingFlushbar(context, 'errors.industries'.tr(), true);
         return false;
       }
-    } catch (e) {
-      print(e);
+    }catch (e, stackTrace) {
+      await Sentry.captureException( e, stackTrace: stackTrace, );
       showFloatingFlushbar(context, 'errors.unknown'.tr(), true);
-      return false;
+      return null;
     }
   } else {
     showFloatingFlushbar(context, 'errors.network'.tr(), true);
