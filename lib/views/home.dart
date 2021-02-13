@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
                     fontSize: 14.0,
                   )),
               onTap: () {
-                Navigator.pushNamed(context, '/users');
+                Navigator.pushReplacementNamed(context, '/users');
               },
             ),
             ListTile(
@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
               onTap: () async {
                 var res = await logout(context);
                 if (res) {
-                  Navigator.pushNamed(context, '/login');
+                  Navigator.pushReplacementNamed(context, '/login');
       
                 } else {
                   Navigator.pop(context);
