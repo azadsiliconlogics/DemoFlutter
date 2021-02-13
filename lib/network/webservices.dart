@@ -1,3 +1,4 @@
+import 'package:demo/commons/utilities.dart';
 import 'package:flutter/material.dart';
 import 'package:connectivity/connectivity.dart';
 import 'dart:convert';
@@ -27,58 +28,19 @@ Future<LoginResponse> login(BuildContext context, username, password) async {
         return LoginResponse.fromJson(responseBody);
       } else if (response.statusCode == 400) {
         String message = responseBody['error'];
-        showFloatingFlushbar(context, message);
+        showFloatingFlushbar(context, message, true);
         return null;
       } else {
-        showFloatingFlushbar(context, 'errors.login'.tr());
+        showFloatingFlushbar(context, 'errors.login'.tr(), true);
         return null;
       }
     } catch (e) {
-      showFloatingFlushbar(context, 'errors.login'.tr());
+      showFloatingFlushbar(context, 'errors.unknown'.tr(), true);
       return null;
     }
   } else {
-    showFloatingFlushbar(context, 'errors.network'.tr());
+    showFloatingFlushbar(context, 'errors.network'.tr(), true);
     return null;
-  }
-}
-
-
-Future<bool> logout(BuildContext context) async {
-  var connectivityResult = await (Connectivity().checkConnectivity());
-
-  if ((connectivityResult == ConnectivityResult.mobile) ||
-      (connectivityResult == ConnectivityResult.wifi)) {
-    try {
-      var token = await Utilities.userToken();
-      showLoader(context);
-      final http.Response response =
-          await http.get(global.LOGIN, headers: {
-        "Content-Type": "application/json",
-        'Authorization': 'Bearer $token',
-      });
-      stopLoader(context);
-      
-      
-
-      if (response.statusCode == 200) {
-        return true;
-      } else if (response.statusCode == 400) {
-        var responseBody = json.decode(response.body);
-        String message = responseBody['error'];
-        showFloatingFlushbar(context, message);
-        return false;
-      } else {
-        showFloatingFlushbar(context, 'errors.login'.tr());
-        return false;
-      }
-    } catch (e) {
-      showFloatingFlushbar(context, 'errors.login'.tr());
-      return false;
-    }
-  } else {
-    showFloatingFlushbar(context, 'errors.network'.tr());
-    return false;
   }
 }
 
@@ -100,21 +62,53 @@ Future<IndustryResponse> getIndustries(BuildContext context) async {
       if (response.statusCode == 200) {
         return IndustryResponse.fromJson(responseBody);
       } else if (response.statusCode == 403) {
-        showFloatingFlushbar(context, 'errors.industries'.tr());
+        showFloatingFlushbar(context, 'errors.industries'.tr(), true);
         var isDelete = await Utilities.clearPreferences();
-        Navigator.pushNamed(context, '/login');
+        Navigator.pushReplacementNamed(context, '/login');
         return null;
       } else {
-        showFloatingFlushbar(context, 'errors.industries'.tr());
+        showFloatingFlushbar(context, 'errors.industries'.tr(), true);
         return null;
       }
     } catch (e) {
       print(e);
-      showFloatingFlushbar(context, 'errors.unknown'.tr());
+      showFloatingFlushbar(context, 'errors.unknown'.tr(), true);
       return null;
     }
   } else {
-    showFloatingFlushbar(context, 'errors.network'.tr());
+    showFloatingFlushbar(context, 'errors.network'.tr(), true);
     return null;
+  }
+}
+
+Future<bool> logout(BuildContext context) async {
+  var connectivityResult = await (Connectivity().checkConnectivity());
+  var token = await Utilities.userToken();
+
+  if ((connectivityResult == ConnectivityResult.mobile) ||
+      (connectivityResult == ConnectivityResult.wifi)) {
+    try {
+      showLoader(context);
+      final http.Response response = await http.get(global.USER, headers: {
+        "Content-Type": "application/json",
+        'Authorization': 'Bearer $token',
+      });
+      stopLoader(context);
+      if (response.statusCode == 200 || response.statusCode == 403) {
+        var isDelete = await Utilities.clearPreferences();
+        Navigator.pushReplacementNamed(context, '/login');
+        return true;
+      } else {
+        showFloatingFlushbar(context, 'errors.industries'.tr(), true);
+        return false;
+      }
+    } catch (e) {
+      print(e);
+      showFloatingFlushbar(context, 'errors.unknown'.tr(), true);
+      return false;
+    }
+  } else {
+    showFloatingFlushbar(context, 'errors.network'.tr(), true);
+    return false;
   }
 }

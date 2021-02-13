@@ -51,49 +51,55 @@ class _LoginPageState extends State<LoginPage> with ValidationMixin {
       appBar: appBar('titles.login'.tr(), context),
       body: ListView(children: <Widget>[
         Container(
-          child: Column(crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.start, children: <Widget>[
-            Container(
-              padding: EdgeInsets.only(left: width / 4, right: width / 4, top: contentGap),
-              child: logoImage,
-            ),
-            Container(
-              padding: EdgeInsets.only(left: 35, right: 35, top: contentGap),
-              child: Form(
-                  key: formKey,
-                  child: Column(children: <Widget>[
-                    Container(
-                      alignment: Alignment.centerLeft,
-                      child: formLabel('labels.email'.tr(), context),
-                    ),
-                    Container(
-                        height: height / 18,
-                        padding: EdgeInsets.only(top: 5),
-                        child: emailField(validateEmail, (String value) {
-                          email = value.trim();
-                        }, context)),
-                    Container(
-                      padding: EdgeInsets.only(top: 15),
-                      alignment: Alignment.centerLeft,
-                      child: formLabel('labels.password'.tr(), context),
-                    ),
-                    Container(
-                        height: height / 18,
-                        padding: EdgeInsets.only(top: 5),
-                        child: passwordField(validatePassword, (String value) {
-                          password = value;
-                        }, context, _obscureText)),
-                    Container(
-                      padding: EdgeInsets.only(top: 50),
-                      child: submitButton('buttonTitles.login'.tr(), () {
-                        formKey.currentState.save();
-                        if (formKey.currentState.validate()) {
-                          this.logUser(context, email, password);
-                        }
-                      }, width - 70, height / 20, context),
-                    ),
-                  ])),
-            ),
-          ]),
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.only(
+                      left: width / 4, right: width / 4, top: contentGap),
+                  child: logoImage,
+                ),
+                Container(
+                  padding:
+                      EdgeInsets.only(left: 35, right: 35, top: contentGap),
+                  child: Form(
+                      key: formKey,
+                      child: Column(children: <Widget>[
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          child: formLabel('labels.email'.tr(), context),
+                        ),
+                        Container(
+                            height: height / 18,
+                            padding: EdgeInsets.only(top: 5),
+                            child: emailField(validateEmail, (String value) {
+                              email = value.trim();
+                            }, context)),
+                        Container(
+                          padding: EdgeInsets.only(top: 15),
+                          alignment: Alignment.centerLeft,
+                          child: formLabel('labels.password'.tr(), context),
+                        ),
+                        Container(
+                            height: height / 18,
+                            padding: EdgeInsets.only(top: 5),
+                            child:
+                                passwordField(validatePassword, (String value) {
+                              password = value;
+                            }, context, _obscureText)),
+                        Container(
+                          padding: EdgeInsets.only(top: 50),
+                          child: submitButton('buttonTitles.login'.tr(), () {
+                            formKey.currentState.save();
+                            if (formKey.currentState.validate()) {
+                              this.logUser(context, email, password);
+                            }
+                          }, width - 70, height / 20, context),
+                        ),
+                      ])),
+                ),
+              ]),
         ),
       ]),
     );
@@ -102,9 +108,9 @@ class _LoginPageState extends State<LoginPage> with ValidationMixin {
   void logUser(context, username, password) async {
     var res = await login(context, username, password);
     if (res != null) {
-      Utilities.saveToken(res.accessToken);
+      var status = await Utilities.saveToken(res.accessToken);
       var token = await Utilities.userToken();
-      Navigator.pushNamed(context, '/home');
+      Navigator.pushReplacementNamed(context, '/home');
     }
   }
 }
